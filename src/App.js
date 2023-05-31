@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Item from './component/Item'
 import ItemDate from './component/ItemDate';
+import Card from './component/Card';
 
 function App() {
   const response=[
@@ -29,7 +30,9 @@ function App() {
   ]
   return (
     <div>
-    <Item name ={response[0].itemName}></Item>
+
+    <Card>
+    <Item name ={response[0].itemName}>hello ji mai hu apki first item</Item>
     <ItemDate day={response[0].itemDate} month={response[0].itemMonth} year ={response[0].itemYear}></ItemDate>
 
     <Item name ={response[1].itemName} ></Item>
@@ -40,6 +43,8 @@ function App() {
     <ItemDate day={response[1].itemDate} month={response[1].itemMonth} year ={response[1].itemYear}></ItemDate>
 
     <div className="App">hello bhai</div>
+
+    </Card>
     </div>
   );
 }
